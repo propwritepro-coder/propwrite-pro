@@ -34,7 +34,7 @@ if st.button("✨ Generate Professional MLS Listing"):
         with st.spinner("Our AI copywriter is polishing your text..."):
             try:
                 prompt = f"You are a world-class real estate copywriter. Take these raw notes and transform them into a high-converting property description suitable for Zillow and MLS. Tone: {tone_option}.\n\nRAW DATA:\n{raw_notes}"
-                model = genai.GenerativeModel('gemini-1.5-flash')
+                model = genai.GenerativeModel('gemini-3.5-flash')
                 response = model.generate_content(prompt)
                 st.subheader("🎉 Your Ready-to-Use Listing")
                 st.write(response.text)
