@@ -22,7 +22,7 @@ else:
     st.sidebar.warning("Please enter your email to authorize the AI engine.")
 
 # 4. Main Banner & Hero Header
-col_logo, col_title = st.columns()
+col_logo, col_title = st.columns(2)
 with col_title:
     st.title("🏠 PropWrite Pro")
     st.markdown("### *The Elite AI Copywriter for High-Ticket Real Estate Agents*")
@@ -45,7 +45,7 @@ with col3:
 st.markdown("---")
 
 # 6. Functional App Layout Workspace
-workspace_col, pricing_col = st.columns()
+workspace_col, pricing_col = st.columns(2)
 
 with workspace_col:
     st.markdown("### 🛠️ Generator Workspace")
@@ -71,7 +71,7 @@ with workspace_col:
                     prompt = f"You are a world-class real estate copywriter. Take these raw notes and transform them into a high-converting property description suitable for Zillow and MLS. Tone: {tone_option}.\n\nRAW DATA:\n{raw_notes}"
                     
                     # 2026 Upgraded Core Model Engine Configuration
-                    model = genai.GenerativeModel('gemini-3.8-flash')
+                    model = genai.GenerativeModel('gemini-2.5-flash')
                     response = model.generate_content(prompt)
                     
                     st.success("🎉 Copywriting Successfully Generated!")
