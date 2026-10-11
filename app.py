@@ -71,7 +71,7 @@ with workspace_col:
                     prompt = f"You are a world-class real estate copywriter. Take these raw notes and transform them into a high-converting property description suitable for Zillow and MLS. Tone: {tone_option}.\n\nRAW DATA:\n{raw_notes}"
                     
                     # 2026 Upgraded Core Model Engine Configuration
-                    model = genai.GenerativeModel('gemini-2.5-flash')
+                    model = genai.GenerativeModel('gemini-3.8-flash')
                     response = model.generate_content(prompt)
                     
                     st.success("🎉 Copywriting Successfully Generated!")
