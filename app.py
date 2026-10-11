@@ -22,7 +22,7 @@ else:
     st.sidebar.warning("Please enter your email to authorize the AI engine.")
 
 # 4. Main Banner & Hero Header
-col_logo, col_title = st.columns([1, 5])
+col_logo, col_title = st.columns([1, 10])
 with col_title:
     st.title("🏠 PropWrite Pro")
     st.markdown("### *The Elite AI Copywriter for High-Ticket Real Estate Agents*")
@@ -69,6 +69,8 @@ with workspace_col:
             with st.spinner("PropWrite AI is drafting your description... Please wait."):
                 try:
                     prompt = f"You are a world-class real estate copywriter. Take these raw notes and transform them into a high-converting property description suitable for Zillow and MLS. Tone: {tone_option}.\n\nRAW DATA:\n{raw_notes}"
+                    
+                    # Correct modern Google Flash model identifier
                     model = genai.GenerativeModel('gemini-2.5-flash')
                     response = model.generate_content(prompt)
                     
