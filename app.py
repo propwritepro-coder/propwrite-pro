@@ -93,3 +93,47 @@ with pricing_col:
         """
     )
     st.link_button("🔥 Unlock Unlimited Access", "https://lemonsqueezy.com")
+
+st.markdown("---")
+
+# 7. Premium FAQ Dropdown Section
+st.markdown("### ❓ Frequently Asked Questions")
+
+with st.expander("🤔 How accurate is PropWrite Pro's AI text generator?"):
+    st.write(
+        """
+        Our engine is powered by advanced enterprise-grade AI models specialized in high-conversion real estate copywriting. 
+        It frames features elegantly, optimizes text lengths for major listing platforms, and handles syntax seamlessly. 
+        However, we always recommend a quick agent review before final publication to ensure structural compliance.
+        """
+    )
+
+with st.expander("⚡ Can I use this for Zillow, Redfin, and my local MLS?"):
+    st.write(
+        """
+        Yes, absolutely. The text generated aligns strictly with the structural requirements and standard formatting limits 
+        used by Zillow, Realtor.com, Redfin, and standard regional MLS platforms. You can copy and paste the text directly.
+        """
+    )
+
+with st.expander("💳 Can I cancel my monthly Pro subscription at any time?"):
+    st.write(
+        """
+        Yes, you can cancel your subscription instantly with zero hidden fees or long-term contract penalties. 
+        You will retain full unlimited billing cycle access until the end of your current active payment window.
+        """
+    )
+
+with st.expander("🔒 Is my property input data and email account secure?"):
+    st.write(
+        """
+        Security is our top operational priority. We utilize enterprise-grade encryption channels to stream 
+        content securely to the AI models. We do not store, distribute, or track your custom property inputs 
+        for model training, keeping your data completely confidential.
+        """
+    )
+
+# 8. Premium Bottom Footer
+st.markdown(" ")
+st.markdown(" ")
+st.caption("© 2026 PropWrite Pro Systems Inc. All intellectual property rights reserved. Driven by secure cloud AI architectures.")
