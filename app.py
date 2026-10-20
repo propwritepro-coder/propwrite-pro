@@ -103,6 +103,10 @@ WRITING RULES
 - Aim for 120–200 words when the available facts support it.
 - Do not invent a price or claim compliance with a specific
   property platform's rules.
+- Do not add unsupported lifestyle claims or implied benefits.
+- Do not assume the buyer will be the owner or occupant.
+- Avoid phrases such as "peace of mind" unless supported by the supplied facts.
+- Keep property condition details clear and factual.
 
 OUTPUT FORMAT
 Headline:
