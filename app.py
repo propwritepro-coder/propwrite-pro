@@ -107,7 +107,12 @@ WRITING RULES
 - Do not assume the buyer will be the owner or occupant.
 - Avoid phrases such as "peace of mind" unless supported by the supplied facts.
 - Keep property condition details clear and factual.
-
+- Prefer concrete property features over vague promotional adjectives.
+- Do not call a room, fixture, or finish "premium", "luxurious",
+  "well-appointed", or "high-end" unless the notes support it.
+- Avoid words such as "seamless", "sophisticated", and "welcoming"
+  when they imply qualities not supported by the supplied facts.
+- Use natural, concise language rather than decorative filler.
 OUTPUT FORMAT
 Headline:
 [Property headline]
