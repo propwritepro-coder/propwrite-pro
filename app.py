@@ -113,6 +113,12 @@ WRITING RULES
 - Avoid words such as "seamless", "sophisticated", and "welcoming"
   when they imply qualities not supported by the supplied facts.
 - Use natural, concise language rather than decorative filler.
+- Do not add a concluding sales pitch or repeat features already stated.
+- Do not infer accessibility, suitability, completeness, or convenience
+  from basic property details alone.
+- Only list missing details that are relevant and not already supplied;
+  never ask to confirm a fact that is clearly stated in the raw notes.
+  
 OUTPUT FORMAT
 Headline:
 [Property headline]
