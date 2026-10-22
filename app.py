@@ -139,7 +139,10 @@ Otherwise write "None identified".]
                     st.success("🎉 Copywriting Successfully Generated!")
                     st.text_area("Ready for MLS (Copy Below):", value=response.text, height=250)
                 except Exception as e:
-                    st.error(f"Execution Error: {e}. Please contact infrastructure support.")
+    if "429" in str(e) or "quota" in str(e).lower():
+        st.warning("AI usage limit reached. Please try again later.")
+    else:
+        st.error("Something went wrong. Please try again later.")
 
 with pricing_col:
     st.markdown("### 💎 Go Unlimited")
