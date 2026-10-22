@@ -138,8 +138,10 @@ Otherwise write "None identified".]
                     
                     st.success("🎉 Copywriting Successfully Generated!")
                     st.text_area("Ready for MLS (Copy Below):", value=response.text, height=250)
-                except Exception as e:
-    if "429" in str(e) or "quota" in str(e).lower():
+                
+except Exception as e:
+    error_message = str(e).lower()
+    if "429" in error_message or "quota" in error_message or "rate limit" in error_message:
         st.warning("AI usage limit reached. Please try again later.")
     else:
         st.error("Something went wrong. Please try again later.")
