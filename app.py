@@ -10,19 +10,20 @@ st.set_page_config(
 )
 
 
-# Refined PropWrite Pro visual theme
+
+# Refined PropWrite Pro visual theme — improved contrast
 st.markdown("""
 <style>
-    /* Core palette and page typography */
     :root {
-        --pp-ink: #101B2B;
-        --pp-navy: #0A1422;
-        --pp-cream: #F5F1E8;
-        --pp-gold: #D5B36A;
-        --pp-gold-dark: #9B783B;
-        --pp-text: #202938;
-        --pp-muted: #687386;
-        --pp-border: #E5DED1;
+        --pp-ink: #172337;
+        --pp-navy: #101B2B;
+        --pp-cream: #F7F4EE;
+        --pp-gold: #D8B66C;
+        --pp-gold-hover: #E7CA8A;
+        --pp-text: #263244;
+        --pp-muted: #596579;
+        --pp-border: #D8D1C5;
+        --pp-white: #FFFFFF;
     }
 
     .stApp {
@@ -30,20 +31,24 @@ st.markdown("""
         color: var(--pp-text);
     }
 
-    /* Keep the sidebar elegant and readable */
+    .main .block-container {
+        max-width: 1440px;
+        padding-top: 2.5rem;
+        padding-bottom: 3rem;
+    }
+
     [data-testid="stSidebar"] {
         background: var(--pp-navy);
-        border-right: 1px solid #263449;
+        border-right: 1px solid #29364A;
     }
 
     [data-testid="stSidebar"] * {
-        color: #F5F1E8;
+        color: #F7F4EE;
     }
 
-    /* Refined editorial headings */
-    h1, h2, h3 {
+    h1, h2, h3, h4 {
         color: var(--pp-ink);
-        letter-spacing: -0.035em;
+        letter-spacing: -0.025em;
     }
 
     h1, h2 {
@@ -51,61 +56,64 @@ st.markdown("""
         font-weight: 500;
     }
 
-    p, label, .stCaption {
+    p, label, [data-testid="stCaptionContainer"] {
+        color: var(--pp-text);
         line-height: 1.65;
     }
 
-    /* Inputs: calm, simple, and professional */
     [data-testid="stTextArea"] textarea,
     [data-testid="stTextInput"] input {
-        background: #FFFEFB;
-        color: var(--pp-text);
-        border: 1px solid var(--pp-border);
-        border-radius: 10px;
+        background: var(--pp-white) !important;
+        color: var(--pp-text) !important;
+        border: 1px solid var(--pp-border) !important;
+        border-radius: 8px !important;
+    }
+
+    [data-testid="stTextArea"] textarea::placeholder,
+    [data-testid="stTextInput"] input::placeholder {
+        color: #687386 !important;
+        opacity: 1 !important;
     }
 
     [data-testid="stSelectbox"] [data-baseweb="select"] > div {
-        border-radius: 10px;
-        border-color: var(--pp-border);
+        background: var(--pp-white);
+        color: var(--pp-text);
+        border: 1px solid var(--pp-border);
+        border-radius: 8px;
     }
 
-    /* Restrained gold primary buttons */
     .stButton > button,
     .stLinkButton > a {
         background: var(--pp-gold);
-        color: #171A20;
+        color: #17202D !important;
         border: 1px solid var(--pp-gold);
-        border-radius: 9px;
-        font-weight: 600;
+        border-radius: 8px;
+        font-weight: 650;
+        min-height: 2.7rem;
         transition: background 0.2s ease, border-color 0.2s ease;
     }
 
     .stButton > button:hover,
     .stLinkButton > a:hover {
-        background: #E3C784;
-        border-color: #E3C784;
-        color: #171A20;
+        background: var(--pp-gold-hover);
+        border-color: var(--pp-gold-hover);
+        color: #17202D !important;
     }
 
-    /* Quiet, understated dividers */
+    .stButton > button:focus-visible,
+    [data-testid="stTextArea"] textarea:focus,
+    [data-testid="stTextInput"] input:focus {
+        outline: 2px solid #9B783B;
+        outline-offset: 2px;
+    }
+
     hr {
         border-color: var(--pp-border);
     }
 
-    /* Consistent keyboard focus */
-    .stButton > button:focus-visible,
-    [data-testid="stTextArea"] textarea:focus,
-    [data-testid="stTextInput"] input:focus {
-        outline: 2px solid var(--pp-gold-dark);
-        outline-offset: 2px;
-    }
-
-    /* Comfortable spacing on narrower screens */
     @media (max-width: 768px) {
-        .block-container {
-            padding-top: 1.25rem;
-            padding-left: 1rem;
-            padding-right: 1rem;
+        .main .block-container {
+            padding: 1.25rem 1rem 2rem;
         }
 
         h1 {
