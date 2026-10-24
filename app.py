@@ -220,7 +220,7 @@ with st.expander("⚡ How it works — 3 simple steps", expanded=False):
 st.markdown("---")
 
 # 6. Generator workspace
-workspace_col, info_col = st.columns(2)
+workspace_col, info_col = st.columns([2, 1], gap="large")
 
 with workspace_col:
     st.markdown("### 🛠️ Listing Generator")
