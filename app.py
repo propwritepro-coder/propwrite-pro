@@ -9,6 +9,112 @@ st.set_page_config(
     layout="wide",
 )
 
+
+# Refined PropWrite Pro visual theme
+st.markdown("""
+<style>
+    /* Core palette and page typography */
+    :root {
+        --pp-ink: #101B2B;
+        --pp-navy: #0A1422;
+        --pp-cream: #F5F1E8;
+        --pp-gold: #D5B36A;
+        --pp-gold-dark: #9B783B;
+        --pp-text: #202938;
+        --pp-muted: #687386;
+        --pp-border: #E5DED1;
+    }
+
+    .stApp {
+        background: var(--pp-cream);
+        color: var(--pp-text);
+    }
+
+    /* Keep the sidebar elegant and readable */
+    [data-testid="stSidebar"] {
+        background: var(--pp-navy);
+        border-right: 1px solid #263449;
+    }
+
+    [data-testid="stSidebar"] * {
+        color: #F5F1E8;
+    }
+
+    /* Refined editorial headings */
+    h1, h2, h3 {
+        color: var(--pp-ink);
+        letter-spacing: -0.035em;
+    }
+
+    h1, h2 {
+        font-family: Georgia, "Times New Roman", serif;
+        font-weight: 500;
+    }
+
+    p, label, .stCaption {
+        line-height: 1.65;
+    }
+
+    /* Inputs: calm, simple, and professional */
+    [data-testid="stTextArea"] textarea,
+    [data-testid="stTextInput"] input {
+        background: #FFFEFB;
+        color: var(--pp-text);
+        border: 1px solid var(--pp-border);
+        border-radius: 10px;
+    }
+
+    [data-testid="stSelectbox"] [data-baseweb="select"] > div {
+        border-radius: 10px;
+        border-color: var(--pp-border);
+    }
+
+    /* Restrained gold primary buttons */
+    .stButton > button,
+    .stLinkButton > a {
+        background: var(--pp-gold);
+        color: #171A20;
+        border: 1px solid var(--pp-gold);
+        border-radius: 9px;
+        font-weight: 600;
+        transition: background 0.2s ease, border-color 0.2s ease;
+    }
+
+    .stButton > button:hover,
+    .stLinkButton > a:hover {
+        background: #E3C784;
+        border-color: #E3C784;
+        color: #171A20;
+    }
+
+    /* Quiet, understated dividers */
+    hr {
+        border-color: var(--pp-border);
+    }
+
+    /* Consistent keyboard focus */
+    .stButton > button:focus-visible,
+    [data-testid="stTextArea"] textarea:focus,
+    [data-testid="stTextInput"] input:focus {
+        outline: 2px solid var(--pp-gold-dark);
+        outline-offset: 2px;
+    }
+
+    /* Comfortable spacing on narrower screens */
+    @media (max-width: 768px) {
+        .block-container {
+            padding-top: 1.25rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+    }
+</style>
+""", unsafe_allow_html=True)
+
 # 2. Secure API configuration
 try:
     GOOGLE_API_KEY = st.secrets["GOOGLE_API_KEY"]
