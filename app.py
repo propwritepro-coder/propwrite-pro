@@ -171,7 +171,7 @@ st.markdown("""
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-bottom: 28px;
+    margin-bottom: 12px;
 ">
     <div style="
         color: #D8B66C;
@@ -198,8 +198,16 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-st.markdown("---")
+hero_button_col, _ = st.columns([1, 4])
+with hero_button_col:
+    if st.button("Start Writing  →", key="hero_start_writing",
+                 use_container_width=True):
+        st.session_state["show_generator_tip"] = True
 
+if st.session_state.get("show_generator_tip", False):
+    st.info("Your listing workspace is just below. Scroll down to add your property notes.")
+
+st.markdown("---")
 
 # 5. How it works
 with st.expander("⚡ How it works — 3 simple steps", expanded=False):
