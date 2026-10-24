@@ -35,7 +35,7 @@ html, body, [class*="css"] {
 [data-testid="stSidebar"] { display: none; }
 .block-container {
     max-width: 1240px;
-    padding-top: 1.2rem;
+    padding-top: 2.5rem;
     padding-bottom: 4rem;
 }
 h1, h2, h3 {
