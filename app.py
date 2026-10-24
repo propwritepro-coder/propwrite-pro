@@ -200,22 +200,22 @@ st.markdown("""
 
 st.markdown("---")
 
+
 # 5. How it works
-st.markdown("#### ⚡ Create a listing in 3 steps")
+with st.expander("⚡ How it works — 3 simple steps", expanded=False):
+    col1, col2, col3 = st.columns(3)
 
-col1, col2, col3 = st.columns(3)
+    with col1:
+        st.markdown("##### 1. Add Property Notes")
+        st.caption("Enter the property facts and features.")
 
-with col1:
-    st.markdown("##### 1. Add Property Notes")
-    st.caption("Enter the property facts and features.")
+    with col2:
+        st.markdown("##### 2. Choose a Tone")
+        st.caption("Select the style for your description.")
 
-with col2:
-    st.markdown("##### 2. Choose a Tone")
-    st.caption("Select the style for your description.")
-
-with col3:
-    st.markdown("##### 3. Review Your Copy")
-    st.caption("Check every detail before publishing.")
+    with col3:
+        st.markdown("##### 3. Review Your Copy")
+        st.caption("Check every detail before publishing.")
 
 st.markdown("---")
 
