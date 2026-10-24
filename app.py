@@ -156,7 +156,50 @@ st.sidebar.caption(
 )
 
 # 4. Main header
+
+# Cinematic luxury hero
+st.markdown("""
+<div style="
+    background:
+        linear-gradient(90deg, rgba(10,20,34,0.92), rgba(10,20,34,0.48)),
+        url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=85');
+    background-size: cover;
+    background-position: center;
+    border-radius: 16px;
+    padding: 64px 48px;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 28px;
+">
+    <div style="
+        color: #D8B66C;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+    ">PROPERTY MARKETING, REFINED</div>
+    <div style="
+        color: #FFFFFF;
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: clamp(34px, 4vw, 56px);
+        line-height: 1.12;
+        max-width: 720px;
+        margin-bottom: 18px;
+    ">Every property has a story.<br>Tell it beautifully.</div>
+    <div style="
+        color: #F1EEE8;
+        font-size: 17px;
+        line-height: 1.7;
+        max-width: 600px;
+    ">Turn property details into polished real estate listing drafts — with clarity, elegance, and care.</div>
+</div>
+""", unsafe_allow_html=True)
+
 st.title("🏠 PropWrite Pro")
+
 st.markdown(
     "### *AI Copywriting for Real Estate Listings*"
 )
