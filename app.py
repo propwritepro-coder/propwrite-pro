@@ -198,11 +198,6 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-st.title("🏠 PropWrite Pro")
-
-st.markdown(
-    "### *AI Copywriting for Real Estate Listings*"
-)
 st.markdown("---")
 
 # 5. How it works
